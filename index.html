@@ -34,10 +34,10 @@
   </header>
 
   <main class="row m-0">
-    <aside class="container col-3 d-none d-lg-block border-0">
-      <ul class="list-unstyled card mt-3 border-0">
-        <li class="card row col border-0"><h2 class="card-title col border-3 border-top border-bottom">Informations personelles</h2>
-          <ul class="container list-unstyled card-body border-0">
+    <aside class="col-3 d-none d-lg-block border-0">
+      <ul class="d-flex flex-column list-unstyled card mt-3 border-0">
+        <li class="card border-0"><h2 class="card-title border-3 p-1 border-top border-bottom">Informations personelles</h2>
+          <ul class="d-flex flex-column list-unstyled card-body p-1 border-0">
             <li class="row"><b class="col">Nom complet:</b><p class="col"> Michael Jeffrey Jordan</p></li>
             <li class="row"><b class="col">Nationalité:</b><p class="col"> Américaine</p></li>
             <li class="row"><b class="col">Naissance:</b><p class="col"> 18 février 1963 - New York, Etat de New York</p></li>
@@ -49,7 +49,9 @@
           <!--<p>Jump Inc., 676 North Michigan Avenue, Suite 293, Chicago, IL 60611a</p>-->
         </li>
         <li class="card row col border-0"><h2 class="card-title col border-3 border-top border-bottom">Références</h2>
-          <p>Toutes la NBA</p></li>
+          <p>Toutes la NBA</p>
+        </li>
+      </ul>
     </aside>
     <article class="col-9">
       <h2 id="carriere" class="fs-3 border-3 border-top border-bottom">Carrière professionnelle</h2>
@@ -77,12 +79,13 @@
           <li><h3 class="fs-5">23XI Racing</h3></li>
         </ul>
       <h2 id="palmares" class="fs-3 border-3 border-top border-bottom">Palmarès</h2>
-      <ul class="accordion" id="accordion">
+      <ul class="accordion list-unstyled" id="palmaresAccordion">
         <li class="accordion-item">
-            <h3 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-target="universitaire" aria-expanded="true" aria-controls="#universitaire">Universitaire</button>
+            <h3 class="accordion-header" id="headingUniv">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#universitaire" aria-expanded="true" aria-controls="universitaire">Universitaire</button>
             </h3>
-            <ul id="universitaire" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+            <article id="universitaire" class="accordion-collapse collapse" aria-labelledby="headingUniv" data-bs-parent="#palmaresAccordion">
+            <ul class="accordion-body">
               <li>1 × Vainqueur du Championnat NCAA de basket-ball 1982 avec les Tar Heels de la Caroline du Nord.</li>
               <li>1 × Freshman of the Year (meilleur joueur disputant sa première année) de l'Atlantic Coast Conference : 1982.</li>
               <li>1 × Atlantic Coast Conference Men's Basketball Player of the Year (meilleur joueur de la saison de l'ACC) : 1984.</li>
@@ -97,23 +100,27 @@
               <li>1 × ACC Athlete of the Year (meilleur sportif de la saison de l'ACC) : 1984.</li>
               <li>2 × NCAA Men's Basketball All-Americans (meilleure équipe NCAA de l'année) : 1983 et 1984.</li>
             </ul>
+          </article>
         </li>
-        <li class="card">
-            <h3 class="card-header">
-              <a class="btn w-100 text-start" data-bs-toggle="collapse" href="#nba">NBA</a>
+        <li class="accordion-item">
+            <h3 class="accordion-header" id="headingNBA">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nba" aria-expanded="true" aria-controls="nba">NBA</button>
             </h3>
-            <ul id="nba" class="collapse card-body" data-bs-parent="#accordion">
+            <article id="nba" class="accordion-collapse collapse" aria-labelledby="headingNBA" data-bs-parent="#palmaresAccordion">
+            <ul class="accordion-body">
               <li>6 × Champion NBA : 1991, 1992, 1993, 1996, 1997, et en 1998 avec les Bulls de Chicago.</li>
               <li>6 × Champion de la Conférence Est : 1991, 1992, 1993, 1996, 1997, et en 1998 avec les Bulls de Chicago.</li>
               <li>6 × Champion de la Division Centrale : 1991, 1992, 1993, 1996, 1997, et en 1998 avec les Bulls de Chicago.</li>
               <li>1 × Vainqueur de l'Open McDonald's 1997 avec les Bulls de Chicago.</li>
             </ul>
+          </article>
         </li>
-        <li class="card">
-          <h3 class="card-header">
-            <a class="btn w-100 text-start" data-bs-toggle="collapse" href="#selectionNationale">Sélection Nationale</a>
+        <li class="accordion-item">
+          <h3 class="accordion-header" id="headingSN">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#SN" aria-expanded="true" aria-controls="SN">Sélection Nationale</button>
           </h3>
-          <ul id="selectionNationale" class="collapse card-body" data-bs-parent="#accordion">
+          <article id="SN" class="accordion-collapse collapse" aria-labelledby="headingSN" data-bs-parent="#palmaresAccordion">
+          <ul class="accordion-body">
             <li>Jeux olympiques d'été de 1984 à Los Angeles.<br/>
             &emsp;Médaille d'or, Jeux olympiques Médaille d'or en basket-ball masculin.</li>
             <li>Jeux olympiques d'été de 1992 à Barcelone.<br/>
@@ -123,12 +130,14 @@
             <li>L'un des six seuls joueurs avec Scottie Pippen, Lamar Odom, Kyrie Irving, LeBron James et Marc Gasol à avoir remporté un titre NBA et un titre FIBA lors d'une même saison.</li>
             <li>Meilleur joueur du tournoi Olympique en 1984.</li>
           </ul>
+        </article>
         </li>
         <li class="accordion-item">
-          <h3 class="accordion-header">
+          <h3 class="accordion-header" id="headingDR">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" href="#distinctionsRecompenses" aria-expanded="true" aria-control="distinctionsRecompenses">Distinctions et récompenses</button>
           </h3>
-          <ul id="distinctionsRecompenses" class="accordion-collapse collapse show" data-bs-parent="#accordion">
+          <article id="distinctionsRecompenses" class="accordion-collapse collapse" aria-labelledby="headingDR" data-bs-parent="#palmaresAccordion">
+          <ul class="accordion-body">
             <li>IBM Award en 1985 et 1989.</li>
             <li>1 × sportif de l'année selon Sports Illustrated en 1991.</li>
             <li>1 × Sporting News Sportsman/Athlete Pro of the Year en 1991.</li>
@@ -150,6 +159,7 @@
             <li>Le 22 novembre 2016, Barack Obama lui décerne la médaille présidentielle de la Liberté166.</li>
         </li>
       </ul>
+    </article>
     </article>
   </main>
 
