@@ -11,8 +11,8 @@
 <body class="container">
   <header id="top" class="position-relative">
     <ul class="row list-unstyled m-0">
-      <li class="bg-success col-3 d-sm-12 p-1" style="--bs-bg-opacity: .7;"><img class="p-0 img-fluid rounded-circle border border-5 border-light" src="src/michael-jordan.jpg" alt="photo de michael jordan"></li>
-      <li class="bg-white col-9 d-none d-sm-block">
+      <li class="bg-success col-sm-3 p-1 col-xs-12" style="--bs-bg-opacity: .7;"><img class="p-0 img-fluid rounded-circle border border-5 border-light" src="src/michael-jordan.jpg" alt="photo de michael jordan"></li>
+      <li class="bg-white col-sm-9 d-none d-sm-block">
         <h1>Michael <span class="text-success" style="--bs-bg-opacity: .7;">Jordan</span></h1>
         <h4>Businessman américain et ancien joueur de basket-ball professionnel</h4>
         <h5 class="d-none d-lg-block">A propos</h5>
@@ -49,11 +49,11 @@
           <!--<p>Jump Inc., 676 North Michigan Avenue, Suite 293, Chicago, IL 60611a</p>-->
         </li>
         <li class="card row col border-0"><h2 class="card-title col border-3 border-top border-bottom">Références</h2>
-          <p>Toutes la NBA</p>
+          <p>Toute la NBA</p>
         </li>
       </ul>
     </aside>
-    <article class="col-9">
+    <article class="col-sm-9 col-xs-12">
       <h2 id="carriere" class="fs-3 border-3 border-top border-bottom">Carrière professionnelle</h2>
         <ul>
           <li><h3 class="fs-5">2001-2003: Washington Wizard</h3></li>
@@ -67,9 +67,9 @@
           <li><h3 class="fs-5">1993-1994: Première retraite et tentative au baseball</h3></li>
           <li><h3 class="fs-5">1984-1993: Chicago Bulls</h3>
             <ul>
+              <li><h4 class="fs-6">1991-1993: Trois titres d'affilée</h4></li>
               <li><h4 class="fs-6">1984-1987: Début à la NBA</h4></li>
               <li><h4 class="fs-6">1887-1890: Sur la route des playoffs avec Les Pistons</h4></li>
-              <li><h4 class="fs-6">1991-1993: Trois titres d'affilée</h4></li>
             </ul>
           </li>
         </ul>
@@ -82,7 +82,7 @@
       <ul class="accordion list-unstyled" id="palmaresAccordion">
         <li class="accordion-item">
             <h3 class="accordion-header" id="headingUniv">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#universitaire" aria-expanded="true" aria-controls="universitaire">Universitaire</button>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#universitaire" aria-expanded="false" aria-controls="universitaire">Universitaire</button>
             </h3>
             <article id="universitaire" class="accordion-collapse collapse" aria-labelledby="headingUniv" data-bs-parent="#palmaresAccordion">
             <ul class="accordion-body">
@@ -104,7 +104,7 @@
         </li>
         <li class="accordion-item">
             <h3 class="accordion-header" id="headingNBA">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#nba" aria-expanded="true" aria-controls="nba">NBA</button>
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nba" aria-expanded="false" aria-controls="nba">NBA</button>
             </h3>
             <article id="nba" class="accordion-collapse collapse" aria-labelledby="headingNBA" data-bs-parent="#palmaresAccordion">
             <ul class="accordion-body">
@@ -117,7 +117,7 @@
         </li>
         <li class="accordion-item">
           <h3 class="accordion-header" id="headingSN">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#SN" aria-expanded="true" aria-controls="SN">Sélection Nationale</button>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#SN" aria-expanded="false" aria-controls="SN">Sélection Nationale</button>
           </h3>
           <article id="SN" class="accordion-collapse collapse" aria-labelledby="headingSN" data-bs-parent="#palmaresAccordion">
           <ul class="accordion-body">
@@ -134,7 +134,7 @@
         </li>
         <li class="accordion-item">
           <h3 class="accordion-header" id="headingDR">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" href="#distinctionsRecompenses" aria-expanded="true" aria-control="distinctionsRecompenses">Distinctions et récompenses</button>
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" href="#distinctionsRecompenses" aria-expanded="false" aria-control="distinctionsRecompenses">Distinctions et récompenses</button>
           </h3>
           <article id="distinctionsRecompenses" class="accordion-collapse collapse" aria-labelledby="headingDR" data-bs-parent="#palmaresAccordion">
           <ul class="accordion-body">
@@ -164,10 +164,12 @@
   </main>
 
   <footer class="d-block d-sm-none fixed-bottom bg-white w-100">
-    <a href="#top"></a>
-    <a href="#carriere"></a>
-    <a href="#retraite"></a>
-    <a href="#palmares"></a>
+    <ul class="list-unstyled d-flex flex-row justify-content-around align-items-center mt-2 mb-2">
+      <li><a href="#top"><img src="src/up-arrow.svg" alt="Retour sommet" width="32" height="32"></a></li>
+      <li><a href="#carriere"><img src="src/basketball.svg" alt="Carriere" width="32" height="32"></a></li>
+      <li><a href="#retraite"><img src="src/businessman.svg" alt="Retraite" width="32" height="32"></a></li>
+      <li><a href="#palmares"><img src="src/cup.svg" alt="Palmares" width="32" height="32"></a></li>
+    </ul>
   </footer>
 </body>
 
